@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="container">
+  <div class="bg-light text-dark p-5">
+    {% if registered %}
+      <h1>Thank you for registering</h1>
+    {% else %}
+      <h2>Register Here...</h2>
+      <h3>Fill out the Form!</h3>
+
+      <form method="post">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </form>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

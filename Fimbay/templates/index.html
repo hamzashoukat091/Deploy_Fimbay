@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="alert alert-success"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<div id="centered">
+  <h1>Clothing Trend 2021</h1>
+</div>
+  <div class="bg-gradient">
+    <img class='' style='width: 100%; max-height: 500px;' src="{% static "images/ecom.jpg" %}" alt="Broken...">
+  </div>
+    <div class="btn">
+      <button class="btn1 btn btn-secondary" type="button" name="button">Show details</button>
+    </div>
+    <div class="container">
+      <div class="row">
+    <div class="col-lg-4 col-6">
+      <img src="{% static "images/5.webp" %}" class="img-thumbnail" alt="Broken...">
+    </div>
+    <div class="col-lg-4 col-6">
+      <img src="{% static "images/1.jpg" %}" class="img-thumbnail" alt="">
+    </div>
+    <div class="col-lg-4 col-6">
+      <img src="{% static "images/2.jpg" %}" class="img-thumbnail" alt="">
+    </div>
+    <div class="col-lg-4 col-6">
+      <img src="{% static "images/3.jpg" %}" class="img-thumbnail" alt="">
+    </div>
+    <div class="col-lg-4 col-6">
+      <img src="{% static "images/4.png" %}" class="img-thumbnail" alt="">
+    </div>
+    <div class="col-lg-4 col-6">
+      <img src="{% static "images/6.webp" %}" class="img-thumbnail" alt="">
+    </div>
+  </div>
+    </div>
+{% endblock %}
